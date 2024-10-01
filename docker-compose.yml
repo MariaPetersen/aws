@@ -13,8 +13,8 @@ services:
             MYSQL_PASSWORD: 'hetic'
 
     phpmyadmin:
-        image: 'phpmyadmin'
-        restart: 'always'
+        image: phpmyadmin
+        restart: always
         expose:
             - '40001'
         ports:
