@@ -26,9 +26,9 @@ services:
     wordpress:
         image: wordpress
         expose:
-            - 90
+            - 80
         ports:
-            - 90:80
+            - 80:80
         environment:
             WORDPRESS_DB_HOST: mariadb
             WORDPRESS_DB_NAME: heticdb
