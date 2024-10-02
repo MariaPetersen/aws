@@ -1,4 +1,12 @@
 services:
+    web:
+        image: nginx
+        expose:
+            - '80'
+        volumes:
+            - ./code:/usr/share/nginx/html
+        ports:
+            - 80:80
     mariadb:
         image: 'mariadb:latest'
         restart: 'always'
@@ -26,9 +34,9 @@ services:
     wordpress:
         image: wordpress
         expose:
-            - 80
+            - 90
         ports:
-            - 80:80
+            - 90:80
         environment:
             WORDPRESS_DB_HOST: mariadb
             WORDPRESS_DB_NAME: heticdb
